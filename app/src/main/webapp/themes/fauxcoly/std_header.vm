@@ -1,0 +1,10 @@
+<div id="main_title">
+<h1><a href="$url.home">$model.weblog.name</a></h1>
+#if($model.weblog.tagline)
+    <p>$model.weblog.tagline</p>
+#end
+</div>
+
+<div id="page_menu">
+    #showPageMenu($model.weblog)
+</div>

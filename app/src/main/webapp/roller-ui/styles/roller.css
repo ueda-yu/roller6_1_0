@@ -1,0 +1,342 @@
+/*
+* Licensed to the Apache Software Foundation (ASF) under one or more
+*  contributor license agreements.  The ASF licenses this file to You
+* under the Apache License, Version 2.0 (the "License"); you may not
+* use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.  For additional information regarding
+* copyright in this work, please see the NOTICE file in the top level
+* directory of this distribution.
+*/
+
+/* roller.css: Base CSS styles for Roller web UI */
+
+table {
+    border:0;
+}
+
+p {
+    margin: 10px 0 10px;
+}
+
+.container {
+    margin: 1em;
+}
+
+.roller-page-title {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.roller-column-right {
+    padding-left: 1em;
+    padding-right: 2em;
+}
+
+.roller-column-left{
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+.date-form {
+    margin: 10px;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 1.25s linear;
+    -moz-transition: opacity 1.25s linear;
+    -ms-transition: opacity 1.25s linear;
+    -o-transition: opacity 1.25s linear;
+    transition: opacity 1.25s linear;
+}
+
+/* bootstrap tweaks */
+
+.glyphicon-info-sign {
+    margin-right: 0.5em;
+}
+
+.controls>input[type=checkbox] {
+    margin-bottom: 0.5em;
+}
+
+/* main menu */
+
+.mm_subtable_label {
+    width: 8em;
+    font-weight: bold; 
+}
+
+.yourWeblogBox {
+    background: white;
+    padding: 1em;
+}
+
+table.mm_table td {
+    padding: 0.3em;
+}
+
+table.mm_table_actions td {
+    padding: 0.1em;
+}
+
+/* edit entry page */
+
+.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
+#panel-plugins {      /* Kludge for EntryEditor.jsp */
+    margin-top: 6px;  /* Without this there no space between Summary and Plugins to Apply panels */
+}
+
+/* keep jQuery UI datepicker in front of other elements */
+.ui-datepicker { 
+    position: relative; 
+    z-index: 10000 !important;
+}
+
+/* entries page */
+
+.scheduledEntryBox {
+    background: #EEEEE0;
+    border: 1px gray solid;
+}
+
+.pendingEntryBox {
+    background: #ffcccc;
+    border: 1px gray solid;
+}
+
+.draftEntryBox {
+    background: #ffffcc;
+    border: 1px gray solid;
+}
+
+td.pendingentry, tr.pendingentry {
+    background: #ffcccc;
+}
+td.draftentry, tr.draftentry {
+    background: #ffffcc;
+}
+td.scheduledentry, tr.scheduledentry {
+    background: #EEEEE0;
+}
+
+.entryEditSidebarLink > a {
+    font-size: 10pt;
+}
+
+/* comments */
+
+td.spamcomment {
+    background: #ffcccc;
+}
+td.pendingcomment {
+    background: #ffffcc;
+}
+.approvedCommentBox {
+    background: #ffffff;
+    border: 1px gray solid;
+}
+.pendingCommentBox {
+    background: #ffffcc;
+    border: 1px gray solid;
+}
+.spamCommentBox {
+    background: #ffcccc;
+    border: 1px gray solid;
+}
+table.innertable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 0;
+}
+table.innertable tbody td {
+    padding: 0;
+}
+table.innertable td.viewbody {
+    padding: 5px;
+}
+table.innertable tr .bot {
+    margin-bottom: 5px;
+}
+table.innertable tr .viewbody .bot {
+    padding-bottom: 10px;
+}
+
+/* categories */
+
+#feedback-area {
+    float: left;
+}
+
+/* sign-in */
+
+body {
+    background-color: white;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Sticky footer styles */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    padding: 1.5em;
+    text-align: center;
+}
+
+/* media files */
+
+.align-images {
+    display:inline;
+    float:left;
+    margin:5px;
+    list-style-type:none;
+    width:140px;
+    height:160px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#sortByMenu {
+    width: 15em;
+}
+
+#viewDirectoryMenu {
+    width: 15em;
+}
+
+#moveTargetMenu {
+    width: 15em;
+}
+
+.mediaObject {
+    width:120px;
+    height:120px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mediaObjectInfo {
+    font-size:11px;
+}
+
+span.glyphicon-file {
+    font-size: 6em;
+}
+
+.highlight {
+    border: 3px solid #aaa;
+}
+
+span.button {
+    height:15px;
+    width:15px;
+    float:right;
+}
+
+.sortByMenu, .viewDirectoryMenu {
+    display: inline;
+}
+
+#imageGrid {
+    display: block;
+    overflow: auto;
+    margin: 1em 0 1em 0;
+}
+
+#imageGrid > div > ul {
+    padding-left:0;
+}
+
+div.image-controls,
+div.image-controls div,
+div.image-controls span,
+div.image-controls select,
+div.image-controls input {
+    display: inline;
+}
+
+
+/* theme edit */
+
+.row-display-flex {
+    display: flex;
+}
+.row-display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+#sharedChooser, #customChooser {
+    height: 13em;
+}
+
+/* members */
+
+tr.rollertable_pending {
+    background: #ffffcc;
+}
+
+
+
