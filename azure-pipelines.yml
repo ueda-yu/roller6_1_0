@@ -1,0 +1,32 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: JavaToolInstaller@0
+  displayName: 'Use Java 17'
+  inputs:
+    versionSpec: 17
+    jdkArchitectureOption: x64
+    jdkSourceOption: PreInstalled
+
+- task: SynopsysSecurityScan@1
+  condition: eq(variables['Build.Reason'], 'PullRequest')
+  env:
+    DETECT_PROJECT_NAME: Ueda_test
+    DETECT_PROJECT_VERSION_NAME: ADO_SecurityScanPR
+    DETECT_EXCLUDED_DETECTOR_TYPES: GIT
+  inputs:
+    scanType: 'blackduck'
+    bridge_blackduck_url: '$(BLACKDUCK_URL)'
+    bridge_blackduck_token: '$(BLACKDUCK_TOKEN)'
+    bridge_blackduck_automation_prcomment: true
+    azure_token: '$(System.AccessToken)'
+  displayName: 'Synopsys Security Scan for PR
