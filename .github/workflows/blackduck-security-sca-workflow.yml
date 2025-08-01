@@ -21,11 +21,11 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         env:
           DETECT_PROJECT_NAME: Ueda_test
-          DETECT_PROJECT_VERSION_NAME: GU_SecurityScanPR
+          DETECT_PROJECT_VERSION_NAME: GH_SecurityScanPR
         with:
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
-          #blackducksca_waitForScan: true
+          blackducksca_waitForScan: true
           #mark_build_status: failure
           #include_diagnostics: false
           #blackducksca_prComment_enabled: true
