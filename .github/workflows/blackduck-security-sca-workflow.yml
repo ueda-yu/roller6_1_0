@@ -20,8 +20,8 @@ jobs:
         id: black-duck-security-scan
         uses: blackduck-inc/black-duck-security-scan@v2
         env:
-    　　　DETECT_PROJECT_NAME: Ueda_test
-    　　　DETECT_PROJECT_VERSION_NAME: GU_SecurityScanPR
+          DETECT_PROJECT_NAME: Ueda_test
+          DETECT_PROJECT_VERSION_NAME: GU_SecurityScanPR
         with:
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
