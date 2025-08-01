@@ -9,8 +9,7 @@ on:
     branches:
       - main
       - master
-
-  workflow_dispatch: {}
+      
 jobs:
   blackducksca:
     runs-on: ubuntu-latest
