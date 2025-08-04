@@ -1,3 +1,5 @@
+## https://documentation.blackduck.com/ja-JP/bundle/bridge/page/documentation/c_github-blackduck.html
+
 name: Black Duck Security Scan
 on:
   push:
@@ -30,7 +32,6 @@ jobs:
           include_diagnostics: false
           blackducksca_prComment_enabled: true
           github_token: ${{ secrets.GH_TOKEN }}
-          #blackducksca_fixpr_enabled: true これがダメ
           #blackducksca_reports_sarif_create: true
           #blackducksca_upload_sarif_report: true
   blackduckscaPRcomment:
@@ -71,6 +72,7 @@ jobs:
           mark_build_status: failure
           include_diagnostics: false
           blackducksca_fixpr_enabled: true
+          blackducksca_fixpr_maxCount: 5
           blackducksca_scan_failure_severities: 'CRITICAL'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
