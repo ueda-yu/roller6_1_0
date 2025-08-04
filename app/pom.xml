@@ -42,7 +42,7 @@ limitations under the License.
         <ant.version>1.10.12</ant.version>
         <asm.version>9.2</asm.version>
         <commons-validator.version>1.7</commons-validator.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-beanutils.version>1.11.0</commons-beanutils.version>
         <commons-codec.version>1.15</commons-codec.version>
         <eclipse-link.version>2.7.9</eclipse-link.version>
         <guice.version>5.0.1</guice.version>
