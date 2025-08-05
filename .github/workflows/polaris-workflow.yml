@@ -25,7 +25,7 @@ jobs:
         with:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_assessment_types: SCA
+          polaris_assessment_types: SCA,SAST
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_test_sca_type: "SCA-SIGNATURE"
