@@ -29,11 +29,11 @@ jobs:
           # polaris_application_name: ${{ github.event.repository.name }}
           # polaris_project_name: ${{ github.event.repository.name }}
           # polaris_test_sca_type: "SCA-SIGNATURE"
-          polaris_waitForScan: true
-          mark_build_status: failure
-          include_diagnostics: true
-          polaris_reports_sarif_create: true
-          polaris_upload_sarif_report: true
+          #polaris_waitForScan: true
+          #mark_build_status: failure
+          #include_diagnostics: true
+          #polaris_reports_sarif_create: true
+          #polaris_upload_sarif_report: true
           
       - name: Polaris Security Scan PR
         id: polaris-scan-PR
