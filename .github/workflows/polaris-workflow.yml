@@ -5,12 +5,13 @@ on:
   push:
     branches:
       - main
-      - master
+      - test1
   pull_request:
     branches:
       - main
-      - master
+      - test1
   workflow_dispatch: {}
+  
 jobs:
   polaris:
     runs-on: ubuntu-latest
