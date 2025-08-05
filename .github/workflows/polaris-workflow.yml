@@ -1,3 +1,5 @@
+## https://documentation.blackduck.com/ja-JP/bundle/bridge/page/documentation/c_github-blackduck.html
+
 name: Polaris Security Scan
 on:
   push:
@@ -15,13 +17,34 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
-      - name: Polaris Security Scan
-        id: polaris-scan
+      - name: Polaris Security Scan full
+        id: polaris-scan-full
+        if: ${{ github.event_name != 'pull_request' }}
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           polaris_assessment_types: SCA,SAST
+          # polaris_application_name: ${{ github.event.repository.name }}
+          # polaris_project_name: ${{ github.event.repository.name }}
+          polaris_test_sca_type: "SCA-SIGNATURE"
+          polaris_waitForScan: true
+          mark_build_status: failure
+          include_diagnostics: true
+          polaris_reports_sarif_create: true
+          polaris_upload_sarif_report: true
+          
+      - name: Polaris Security Scan PR
+        id: polaris-scan-PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: blackduck-inc/black-duck-security-scan@v2
+        with:
+          polaris_server_url: ${{ vars.POLARIS_URL }}
+          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          polaris_assessment_types: SCA,SAST
+          # polaris_application_name: ${{ github.event.repository.name }}
+          # polaris_project_name: ${{ github.event.repository.name }}
+          # polaris_test_sca_type: "SCA-SIGNATURE"
           polaris_waitForScan: true
           mark_build_status: failure
           include_diagnostics: true
@@ -29,3 +52,4 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           polaris_reports_sarif_create: true
           polaris_upload_sarif_report: true
+
