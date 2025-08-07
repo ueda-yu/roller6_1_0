@@ -33,7 +33,7 @@ jobs:
           mark_build_status: failure
           include_diagnostics: false
           blackducksca_prComment_enabled: true
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           #blackducksca_reports_sarif_create: true
           #blackducksca_upload_sarif_report: true
   blackduckscaPRcomment:
@@ -55,7 +55,7 @@ jobs:
           mark_build_status: failure
           include_diagnostics: false
           blackducksca_prComment_enabled: true
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   blackduckscaPR:
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' }}
