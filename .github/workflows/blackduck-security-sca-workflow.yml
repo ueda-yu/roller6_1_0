@@ -24,7 +24,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         env:
           DETECT_PROJECT_NAME: Ueda_test
-          DETECT_PROJECT_VERSION_NAME: GH_SecurityScan_Full
+          DETECT_PROJECT_VERSION_NAME: GitHub_SecurityScan_Full
         with:
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
@@ -47,7 +47,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         env:
           DETECT_PROJECT_NAME: Ueda_test
-          DETECT_PROJECT_VERSION_NAME: GH_SecurityScan_PRcomment
+          DETECT_PROJECT_VERSION_NAME: GitHub_SecurityScan_PR
         with:
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
