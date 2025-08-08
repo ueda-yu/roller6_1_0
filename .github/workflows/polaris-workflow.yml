@@ -28,9 +28,7 @@ jobs:
           polaris_assessment_types: SCA
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
-          polaris_test_sca_type: "SCA-SIGNATURE"
-          #coverity_build_command: mvn clean
-          #coverity_clean_command: make
+          #polaris_test_sca_type: "SCA-SIGNATURE"
           #polaris_waitForScan: true
           #mark_build_status: failure
           #include_diagnostics: true
@@ -47,7 +45,7 @@ jobs:
           polaris_assessment_types: SCA
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
-          polaris_test_sca_type: "SCA-SIGNATURE"
+          #polaris_test_sca_type: "SCA-SIGNATURE"
           #polaris_waitForScan: true
           #mark_build_status: failure
           #include_diagnostics: true
