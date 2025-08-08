@@ -54,7 +54,7 @@ limitations under the License.
         <maven-antrun.version>1.0b3</maven-antrun.version>
         <rome.version>1.16.0</rome.version>
         <slf4j.version>1.7.32</slf4j.version>
-        <spring.version>5.3.14</spring.version>
+        <spring.version>6.2.9</spring.version>
         <spring.security.version>5.6.0</spring.security.version>
         <struts.version>2.5.28.1</struts.version>
         <velocity.version>2.3</velocity.version>
